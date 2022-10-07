@@ -201,7 +201,7 @@ def main():
         train_dst, batch_size=opts.batch_size, shuffle=True, num_workers=2,
         drop_last=True)  # drop_last=True to ignore single-image batches.
     val_loader = data.DataLoader(
-        val_dst, batch_size=opts.val_batch_size, shuffle=True, num_workers=2)
+        val_dst, batch_size=1, shuffle=True, num_workers=2)
     print("Dataset: Train set: %d, Val set: %d" %
           (len(train_dst), len(val_dst)))
 
