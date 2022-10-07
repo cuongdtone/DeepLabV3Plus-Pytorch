@@ -301,7 +301,7 @@ def main():
             if vis is not None:
                 vis.vis_scalar('Loss', cur_itrs, np_loss)
 
-            pbar.set_postfix(loss=interval_loss)
+            pbar.set_postfix(loss=np_loss)
 
         save_ckpt(f'{opts.project}/latest_%s_os%d.pth' %(opts.model, opts.output_stride))
         print("validation...")
